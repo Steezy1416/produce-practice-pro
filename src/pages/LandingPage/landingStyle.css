@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#landing-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("../../assets/landingPageImg.jpg");
+    background-size: 100% auto;
+}
+
+#welcome-card {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 1.5rem;
+    background-color: #252422;
+    color: white;
+    box-shadow: 0 0 1.5rem .2rem rgba(0, 0, 0, .25);
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 2.2rem;
+    font-family: 'Staatliches', cursive;
+}
+
+#get-started-btn {
+    margin-top: 1.5rem;
+    padding: .3em .5em;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 .6rem -.2rem rgba(0, 0, 0, .25);
+    font-size: 1.1rem;
+    font-family: 'Bebas Neue', cursive;
+    background-color: #e63946;
+    color: white;
+}
+
+span {
+    color: #e63946;
+}
