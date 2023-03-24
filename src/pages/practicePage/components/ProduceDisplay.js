@@ -1,9 +1,11 @@
-export default function ProduceDisplay({code}){
+export default function ProduceDisplay({ code, index, produce }) {
     return (
-        <div id="produceDisplayCard">
-            <img id="produce-image"/>
-            <p id="produce-name"></p>
-            <p id="procue-code">Code: {code}</p>
+        <div id="produce-display-card">
+            <img id="produce-image" src={require(`../../../assets${produce[index].image}`)} />
+            <div id="produce-info-container">
+                <p id="produce-name">{produce[index].name}</p>
+                <p id="produce-code">Code: <span className="highlightCodeColor">{code}</span></p>
+            </div>
         </div>
     )
 }

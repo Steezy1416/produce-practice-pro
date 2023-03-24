@@ -1,0 +1,149 @@
+#practice-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: #2f4550;
+}
+
+#produce-display-card {
+    background-color: #252422;
+    padding: 1.5rem 1rem .5rem 1rem;
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 0 1rem -.5rem rgba(0, 0, 0, .50);
+}
+
+#produce-image {
+    width: 18rem;
+    height: 15rem;
+    border-radius: 15px;
+    box-shadow: 0 0 3rem -.5rem rgba(0, 0, 0, .25);
+}
+
+.wrong {
+    animation-name: wrongAnswer;
+    animation-duration: .2s;
+    animation-iteration-count: 2;
+}
+
+@keyframes wrongAnswer {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(50px);
+    }
+    40% {
+        transform: translateX(25px);
+    }
+    75% {
+        transform: translateX(-50px);
+    }
+    90% {
+        transform: translate(-25px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+#produce-info-container {
+    font-family: 'Staatliches', cursive;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+#produce-name {
+    margin: .5rem 0;
+    color: #16db65;
+}
+
+.highlightCodeColor {
+    color: #c77dff;
+}
+
+#produce-code {
+    margin: .5rem 0;
+}
+
+#keyboard-container {
+    margin: 1rem 0;
+    width: 14rem;
+    height: 20rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    column-gap: .2rem;
+    row-gap: .3rem;
+    grid-template-areas:
+        "clear clear clear"
+        "seven eight nine"
+        "four five six"
+        "one two three"
+        "zero zero enter";
+}
+
+.btn {
+    background-color: white;
+    color: black;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.5rem;
+    border-radius: 15px;
+}
+
+#clear {
+    grid-area: clear;
+    background-color: #e63946;
+    color: white;
+}
+
+#n7 {
+    grid-area: seven;
+}
+
+#n8 {
+    grid-area: eight;
+}
+
+#n9 {
+    grid-area: nine;
+}
+
+#n4 {
+    grid-area: four;
+}
+
+#n5 {
+    grid-area: five;
+}
+
+#n6 {
+    grid-area: six;
+}
+
+#n1 {
+    grid-area: one;
+}
+
+#n2 {
+    grid-area: two;
+}
+
+#n3 {
+    grid-area: three;
+}
+
+#n0 {
+    grid-area: zero;
+}
+
+#enter {
+    grid-area: enter;
+    background-color: #ffea00;
+    color: black;
+    font-size: 1rem;
+}

@@ -34,7 +34,7 @@ h1 {
     padding: .9em;
     border: none;
     border-radius: 5px;
-    box-shadow: 0 0 .6rem -.2rem rgba(0, 0, 0, .25);
+    box-shadow: 0 0 .8rem .5rem rgba(0, 0, 0, .25);
     font-size: 1.1rem;
     font-family: 'Bebas Neue', cursive;
     background-color: #e63946;
