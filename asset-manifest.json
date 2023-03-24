@@ -1,8 +1,7 @@
 {
   "files": {
-    "main.css": "/produce-practice-pro/static/css/main.75cb7abe.css",
-    "main.js": "/produce-practice-pro/static/js/main.32ce1557.js",
-    "static/media/landingPageImg.jpg": "/produce-practice-pro/static/media/landingPageImg.daa14a65ab9140a27ddd.jpg",
+    "main.css": "/produce-practice-pro/static/css/main.0016abf6.css",
+    "main.js": "/produce-practice-pro/static/js/main.d2fd9a22.js",
     "static/media/cauliflower.jpg": "/produce-practice-pro/static/media/cauliflower.9a8d244d0e1e5a86e992.jpg",
     "static/media/metaLink.png": "/produce-practice-pro/static/media/metaLink.90cadab2e0f17a4d60d3.png",
     "static/media/romaTomatoes.jpg": "/produce-practice-pro/static/media/romaTomatoes.db4334a1c5d64fe731df.jpg",
@@ -12,6 +11,7 @@
     "static/media/pomegrant.jpg": "/produce-practice-pro/static/media/pomegrant.f4dcdde045fe1a9299c9.jpg",
     "static/media/kale.jpg": "/produce-practice-pro/static/media/kale.1fe80a925e07b9da06b8.jpg",
     "static/media/calabasaSquash.jpg": "/produce-practice-pro/static/media/calabasaSquash.775bd467c9421ed82ccf.jpg",
+    "static/media/landingPageImg.jpg": "/produce-practice-pro/static/media/landingPageImg.e003bd5194332f66027f.jpg",
     "static/media/cantaloupe.jpg": "/produce-practice-pro/static/media/cantaloupe.30b74526d024f8c5d787.jpg",
     "static/media/romaineLettuce.jpg": "/produce-practice-pro/static/media/romaineLettuce.da14502c2643699855ee.jpg",
     "static/media/beetWithTop.jpg": "/produce-practice-pro/static/media/beetWithTop.2417735ad1a7273540fb.jpg",
@@ -100,11 +100,11 @@
     "static/media/donut.jpg": "/produce-practice-pro/static/media/donut.ddf5ce7517f06b856b6a.jpg",
     "static/media/honeydew.jpg": "/produce-practice-pro/static/media/honeydew.b9eea43d5b7457300698.jpg",
     "index.html": "/produce-practice-pro/index.html",
-    "main.75cb7abe.css.map": "/produce-practice-pro/static/css/main.75cb7abe.css.map",
-    "main.32ce1557.js.map": "/produce-practice-pro/static/js/main.32ce1557.js.map"
+    "main.0016abf6.css.map": "/produce-practice-pro/static/css/main.0016abf6.css.map",
+    "main.d2fd9a22.js.map": "/produce-practice-pro/static/js/main.d2fd9a22.js.map"
   },
   "entrypoints": [
-    "static/css/main.75cb7abe.css",
-    "static/js/main.32ce1557.js"
+    "static/css/main.0016abf6.css",
+    "static/js/main.d2fd9a22.js"
   ]
 }
