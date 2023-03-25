@@ -23,6 +23,34 @@
     box-shadow: 0 0 3rem -.5rem rgba(0, 0, 0, .25);
 }
 
+.correct {
+    animation-name: correct;
+    animation-duration: .2s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes correct {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(100px);
+    }
+
+    50% {
+        transform: translateX(400px);
+    }
+
+    75% {
+        transform: translateX(100px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
 .wrong {
     animation-name: wrongAnswer;
     animation-duration: .2s;
@@ -56,32 +84,51 @@
     font-family: 'Staatliches', cursive;
     margin: 1rem 0;
     font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #produce-name {
     margin: .5rem 0;
     color: #16db65;
+    font-size: 1.3rem;
 }
 
-.highlightCodeColor {
+.highlightColor {
     color: #c77dff;
 }
 
 #produce-code {
     margin: .5rem 0;
+    font-size: 1.3rem;
+}
+
+#produce-info-functions {
+    text-align: right;
+}
+
+#produce-time {
+    margin: .5rem 0;
+    font-size: 1.3rem;
+}
+
+#produce-skip {
+    margin: .5rem 0;
+    font-size: 1.3rem;
 }
 
 #keyboard-container {
     margin: 1.5rem 0 0 0;
-    width: 80%;
-    height: 80%;
+    width: 15rem;
+    height: 20rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(5, 1fr);
     column-gap: .2rem;
     row-gap: .3rem;
     grid-template-areas:
-        "clear clear clear"
+        "exit clear clear"
         "seven eight nine"
         "four five six"
         "one two three"
@@ -94,6 +141,16 @@
     font-family: 'Bebas Neue', cursive;
     font-size: 1.5rem;
     border-radius: 15px;
+}
+
+#exit {
+    grid-area: exit;
+    background-color: #16db65;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
 }
 
 #clear {
