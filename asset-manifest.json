@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/produce-practice-pro/static/css/main.7f9107a3.css",
-    "main.js": "/produce-practice-pro/static/js/main.e0111d1a.js",
+    "main.js": "/produce-practice-pro/static/js/main.a0cdcb0a.js",
     "static/media/cauliflower.jpg": "/produce-practice-pro/static/media/cauliflower.9a8d244d0e1e5a86e992.jpg",
     "static/media/metaLink.png": "/produce-practice-pro/static/media/metaLink.90cadab2e0f17a4d60d3.png",
     "static/media/romaTomatoes.jpg": "/produce-practice-pro/static/media/romaTomatoes.db4334a1c5d64fe731df.jpg",
@@ -101,10 +101,10 @@
     "static/media/honeydew.jpg": "/produce-practice-pro/static/media/honeydew.b9eea43d5b7457300698.jpg",
     "index.html": "/produce-practice-pro/index.html",
     "main.7f9107a3.css.map": "/produce-practice-pro/static/css/main.7f9107a3.css.map",
-    "main.e0111d1a.js.map": "/produce-practice-pro/static/js/main.e0111d1a.js.map"
+    "main.a0cdcb0a.js.map": "/produce-practice-pro/static/js/main.a0cdcb0a.js.map"
   },
   "entrypoints": [
     "static/css/main.7f9107a3.css",
-    "static/js/main.e0111d1a.js"
+    "static/js/main.a0cdcb0a.js"
   ]
 }
