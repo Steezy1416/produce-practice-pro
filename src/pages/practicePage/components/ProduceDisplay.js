@@ -43,8 +43,17 @@ export default function ProduceDisplay({ code, index, setIndex, produce, timer, 
                     <p id="produce-code">Code: <span className="highlightColor">{code}</span></p>
                 </div>
                 <div id="produce-info-functions">
-                    <p id="produce-time">Time: <span className="highlightColor">{timer.min}:{timer.sec < 10 && 0}{timer.sec}</span></p>
-                    {wrongCount.count >= 3 && <p onClick={skipCode} id="produce-skip">Skip</p>}
+                    <p id="produce-time">
+                        Time: <span className="highlightColor">
+                            {timer.min}:{timer.sec < 10 && 0}{timer.sec}
+                        </span>
+                    </p>
+
+                    {wrongCount.count >= 3 &&
+                        <button onClick={skipCode} id="produce-skip">
+                            Skip <i className="fa-solid fa-forward" />
+                        </button>
+                    }
                 </div>
             </div>
         </div>

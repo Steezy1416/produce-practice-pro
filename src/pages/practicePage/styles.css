@@ -86,7 +86,7 @@
 #produce-info-container {
     font-family: 'Staatliches', cursive;
     margin: 1rem 0;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -95,7 +95,6 @@
 #produce-name {
     margin: .5rem 0;
     color: #16db65;
-    font-size: 1.3rem;
 }
 
 .highlightColor {
@@ -104,7 +103,6 @@
 
 #produce-code {
     margin: .5rem 0;
-    font-size: 1.3rem;
 }
 
 #produce-info-functions {
@@ -113,12 +111,14 @@
 
 #produce-time {
     margin: .5rem 0;
-    font-size: 1.3rem;
 }
 
 #produce-skip {
-    margin: .5rem 0;
-    font-size: 1.3rem;
+    padding: 0;
+    background: transparent;
+    border: none;
+    color: #e63946;
+    font: inherit;
 }
 
 #keyboard-container {
