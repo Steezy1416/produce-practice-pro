@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-export default function ProduceKeyboard({ code, setCode, index, setIndex, produce, setFinished, setTimer, timer }) {
+export default function ProduceKeyboard({ code, setCode, index, setIndex, produce, setFinished, setTimer, timer, wrongCount, setWrongCount }) {
 
     const keyboardNums = ["7", "8", "9", "4", "5", "6", "3", "2", "1", "0"]
 
@@ -11,6 +11,7 @@ export default function ProduceKeyboard({ code, setCode, index, setIndex, produc
     const addNumber = number => {
         if (code.length < 5) {
             setCode(code + number)
+            setTimer({ ...timer, started: true })
         }
     }
 
@@ -18,11 +19,13 @@ export default function ProduceKeyboard({ code, setCode, index, setIndex, produc
         const produceImage = document.querySelector("#produce-image")
         if (code === produce[index].code && index === produce.length - 1) {
             setFinished(true)
+            setTimer({ ...timer, started: false })
             return
         }
         if (code === produce[index].code) {
             setIndex(index + 1)
             setCode("")
+            setWrongCount({ count: 0, skipped: false })
             produceImage.classList.toggle("correct")
             produceImage.addEventListener("animationend", () => {
                 produceImage.classList.remove("correct");
@@ -30,6 +33,7 @@ export default function ProduceKeyboard({ code, setCode, index, setIndex, produc
         }
         else {
             setCode("")
+            setWrongCount({ ...wrongCount, count: wrongCount.count + 1 })
             produceImage.classList.toggle("wrong")
             produceImage.addEventListener("animationend", () => {
                 produceImage.classList.remove("wrong");

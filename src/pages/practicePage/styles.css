@@ -65,12 +65,15 @@
     25% {
         transform: translateX(50px);
     }
+
     40% {
         transform: translateX(25px);
     }
+
     75% {
         transform: translateX(-50px);
     }
+
     90% {
         transform: translate(-25px);
     }
@@ -86,7 +89,7 @@
     font-size: 1.2rem;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
 }
 
 #produce-name {
