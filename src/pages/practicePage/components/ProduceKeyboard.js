@@ -25,7 +25,7 @@ export default function ProduceKeyboard({ code, setCode, index, setIndex, produc
         if (code === produce[index].code) {
             setIndex(index + 1)
             setCode("")
-            setWrongCount({ count: 0, skipped: false })
+            setWrongCount({...wrongCount, count: 0, skipped: false })
             produceImage.classList.toggle("correct")
             produceImage.addEventListener("animationend", () => {
                 produceImage.classList.remove("correct");

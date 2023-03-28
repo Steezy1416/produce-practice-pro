@@ -27,11 +27,12 @@ export default function ProduceDisplay({ code, index, setIndex, produce, timer, 
             : { ...timer, min: timer.min + 1, sec: timer.sec + 30 - 60 })
         if (index === produce.length - 1) {
             setFinished(true)
+            setWrongCount({ count: 0, skipped: false, wrongAnswers: [...wrongCount.wrongAnswers, produce[index]] })
             setTimer({ ...timer, started: false })
             return
         }
         setIndex(index + 1)
-        setWrongCount({ count: 0, skipped: false })
+        setWrongCount({ count: 0, skipped: false, wrongAnswers: [...wrongCount.wrongAnswers, produce[index]] })
     }
 
     return (

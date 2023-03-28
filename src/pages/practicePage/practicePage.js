@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ProduceDisplay from "./components/ProduceDisplay";
 import ProduceKeyboard from "./components/ProduceKeyboard";
+import Results from "./components/Results";
 import produce from "../../assets/produce";
 import "./styles.css"
 
@@ -10,7 +11,7 @@ export default function PracticePage() {
     const [code, setCode] = useState("")
     const [index, setIndex] = useState(0)
     const [timer, setTimer] = useState({ min: 0, sec: 0, started: false })
-    const [wrongCount, setWrongCount] = useState({ count: 0, skipped: false })
+    const [wrongCount, setWrongCount] = useState({ count: 0, skipped: false, wrongAnswers: [] })
 
     return (
         <>
@@ -43,7 +44,10 @@ export default function PracticePage() {
                 </section>
             }
             {finished &&
-                <h1>Congrats you finished, your total time is {timer.min}:{timer.sec}</h1>
+                <Results
+                    timer={timer}
+                    wrongCount={wrongCount}
+                />
             }
         </>
     )
