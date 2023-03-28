@@ -2,16 +2,19 @@ import { useEffect } from "react"
 
 export default function ProduceDisplay({ code, index, setIndex, produce, timer, setTimer, wrongCount, setWrongCount, setFinished }) {
 
+    const { minutes, seconds, timerStarted } = timer
+    const { wrongGuesses, wrongAnswers } = wrongCount
+
     useEffect(() => {
         let intervalId
-        if (timer.started) {
+        if (timerStarted) {
             intervalId = setInterval(() => {
                 setTimer(prevTime => {
                     let newTime = { ...prevTime }
-                    newTime.sec = newTime.sec + 1
-                    if (newTime.sec === 60) {
-                        newTime.sec = 0
-                        newTime.min = newTime.min + 1
+                    newTime.seconds = newTime.seconds + 1
+                    if (newTime.seconds === 60) {
+                        newTime.seconds = 0
+                        newTime.minutes++
                     }
                     return newTime
 
@@ -19,25 +22,25 @@ export default function ProduceDisplay({ code, index, setIndex, produce, timer, 
             }, 1000)
             return () => clearInterval(intervalId);
         }
-    }, [timer, setTimer])
+    }, [timerStarted, setTimer])
 
     const skipCode = () => {
-        setTimer(timer.sec + 30 < 60
-            ? { ...timer, sec: timer.sec + 30 }
-            : { ...timer, min: timer.min + 1, sec: timer.sec + 30 - 60 })
+        setTimer(seconds + 30 < 60
+            ? { ...timer, seconds: seconds + 30 }
+            : { ...timer, minutes: minutes + 1, seconds: seconds + 30 - 60 }
+        )
+        setWrongCount({ wrongGuesses: 0, skipped: false, wrongAnswers: [...wrongAnswers, produce[index]] })
         if (index === produce.length - 1) {
             setFinished(true)
-            setWrongCount({ count: 0, skipped: false, wrongAnswers: [...wrongCount.wrongAnswers, produce[index]] })
             setTimer({ ...timer, started: false })
             return
         }
         setIndex(index + 1)
-        setWrongCount({ count: 0, skipped: false, wrongAnswers: [...wrongCount.wrongAnswers, produce[index]] })
     }
 
     return (
         <div id="produce-display-card">
-            <img id="produce-image" src={require(`../../../assets${produce[index].image}`)} />
+            <img alt="" id="produce-image" src={require(`../../../assets${produce[index].image}`)} />
             <div id="produce-info-container">
                 <div id="produce-info">
                     <p id="produce-name">{produce[index].name}</p>
@@ -46,11 +49,11 @@ export default function ProduceDisplay({ code, index, setIndex, produce, timer, 
                 <div id="produce-info-functions">
                     <p id="produce-time">
                         Time: <span className="highlightColor">
-                            {timer.min}:{timer.sec < 10 && 0}{timer.sec}
+                            {minutes}:{seconds < 10 && 0}{seconds}
                         </span>
                     </p>
 
-                    {wrongCount.count >= 3 &&
+                    {wrongGuesses >= 3 &&
                         <button onClick={skipCode} id="produce-skip">
                             Skip <i className="fa-solid fa-forward" />
                         </button>

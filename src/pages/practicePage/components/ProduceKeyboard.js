@@ -2,6 +2,7 @@ import { Link } from "react-router-dom"
 
 export default function ProduceKeyboard({ code, setCode, index, setIndex, produce, setFinished, setTimer, timer, wrongCount, setWrongCount }) {
 
+    const { wrongGuesses } = wrongCount
     const keyboardNums = ["7", "8", "9", "4", "5", "6", "3", "2", "1", "0"]
 
     const clearCode = () => {
@@ -11,7 +12,7 @@ export default function ProduceKeyboard({ code, setCode, index, setIndex, produc
     const addNumber = number => {
         if (code.length < 5) {
             setCode(code + number)
-            setTimer({ ...timer, started: true })
+            setTimer({ ...timer, timerStarted: true })
         }
     }
 
@@ -23,9 +24,9 @@ export default function ProduceKeyboard({ code, setCode, index, setIndex, produc
             return
         }
         if (code === produce[index].code) {
-            setIndex(index + 1)
             setCode("")
-            setWrongCount({...wrongCount, count: 0, skipped: false })
+            setIndex(index + 1)
+            setWrongCount({ ...wrongCount, wrongGuesses: 0, skipped: false })
             produceImage.classList.toggle("correct")
             produceImage.addEventListener("animationend", () => {
                 produceImage.classList.remove("correct");
@@ -33,7 +34,7 @@ export default function ProduceKeyboard({ code, setCode, index, setIndex, produc
         }
         else {
             setCode("")
-            setWrongCount({ ...wrongCount, count: wrongCount.count + 1 })
+            setWrongCount({ ...wrongCount, wrongGuesses: wrongGuesses + 1 })
             produceImage.classList.toggle("wrong")
             produceImage.addEventListener("animationend", () => {
                 produceImage.classList.remove("wrong");
