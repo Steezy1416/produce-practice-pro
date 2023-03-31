@@ -47,6 +47,10 @@ export default function PracticePage() {
                 <Results
                     timer={timer}
                     wrongCount={wrongCount}
+                    setFinished={setFinished}
+                    setIndex={setIndex}
+                    setTimer={setTimer}
+                    setWrongCount={setWrongCount}
                 />
             }
         </>

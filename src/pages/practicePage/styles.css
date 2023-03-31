@@ -211,16 +211,18 @@
 
 #result-page-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
+    background-color:#62b6cb;
+    color: white;
     height: 100vh;
     padding: 1rem;
 }
 
 #time-message {
     font-size: 2.5rem;
-    margin: 2rem 0;
+    margin: 1rem 0;
 }
 
 #result-card {
@@ -229,11 +231,12 @@
     align-items: center;
     flex-direction: column;
     background-color: #252422;
-    color: white;
+    color: whitesmoke;
     padding: 1rem;
     border-radius: 15px;
     width: 19rem;
     height: 25rem;
+    box-shadow: 0 0 1rem -.5rem rgba(0, 0, 0, .50);
 }
 
 #result-card p {
@@ -244,8 +247,8 @@
 
 #table-container {
     overflow-y: auto;
-    height: 10rem;
-    border-radius: 15px;
+    height: 20rem;
+    border-radius: 10px;
 }
 
 #result-table {
@@ -253,26 +256,56 @@
     color: black;
     border-collapse: collapse;
     border-radius: 10px;
-    padding: .8rem;
     width: 15rem;
+    height: 20rem;
+    box-shadow: 0 0 1rem -.5rem rgba(0, 0, 0, .50);
 }
 
 thead tr th {
     padding: .5rem;
-    border-bottom: 1px dashed black;
+    border-bottom: 1px solid white;
+    font-size: 1.2rem;
+    font-family: 'Staatliches', cursive;
+    background-color: #ffea00;
+    color: black;
 }
 
 tbody tr td {
     padding: .3rem 2rem;
-    border: 1px solid gray;
     text-align: center;
+    border-bottom: 1px solid white;
+    font-family: 'Bebas Neue', cursive;
+    background-color: #333;
+    color: #16db65;
 }
 
 tfoot tr td {
-    border-top: 1px dashed black;
     padding: .5rem;
+    font-size: 1.2rem;
+    font-family: 'Staatliches', cursive;
+    background-color: #c77dff;
+    color: whitesmoke;
 }
 
 .code {
     text-align: right;
+    border-left: 1px solid white;
+    color: #c77dff;
+    
+}
+
+.stat-highlight {
+    color: #ffea00;
+}
+
+#play-again-btn {
+    margin-top: 1.5rem;
+    padding: .5em;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 .5rem -.5rem rgba(0, 0, 0, .25);
+    font-size: 1.5rem;
+    font-family: 'Bebas Neue', cursive;
+    background-color: #e63946;
+    color: white;
 }
