@@ -25,6 +25,7 @@ export default function ProduceDisplay({ code, index, setIndex, produce, timer, 
     }, [timerStarted, setTimer])
 
     const skipCode = () => {
+        setIndex(index + 1)
         setTimer(seconds + 30 < 60
             ? { ...timer, seconds: seconds + 30 }
             : { ...timer, minutes: minutes + 1, seconds: seconds + 30 - 60 }
@@ -38,7 +39,6 @@ export default function ProduceDisplay({ code, index, setIndex, produce, timer, 
             )
             return
         }
-        setIndex(index + 1)
     }
 
     return (
