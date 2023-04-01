@@ -33,11 +33,6 @@ export default function ProduceDisplay({ code, index, setIndex, produce, timer, 
         setWrongCount({ wrongGuesses: 0, skipped: false, wrongAnswers: [...wrongAnswers, produce[index]] })
         if (index === produce.length - 1) {
             setFinished(true)
-            setTimer(seconds + 30 < 60
-                ? { ...timer, seconds: seconds + 30, started: false }
-                : { ...timer, minutes: minutes + 1, seconds: seconds + 30 - 60, started: false }
-            )
-            return
         }
     }
 
