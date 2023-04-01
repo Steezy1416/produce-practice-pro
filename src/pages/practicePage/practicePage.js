@@ -9,7 +9,7 @@ export default function PracticePage() {
 
     const [finished, setFinished] = useState(false)
     const [code, setCode] = useState("")
-    const [index, setIndex] = useState(95)
+    const [index, setIndex] = useState(0)
     const [timer, setTimer] = useState({ minutes: 0, seconds: 0, timerStarted: false })
     const [wrongCount, setWrongCount] = useState({ wrongGuesses: 0, skipped: false, wrongAnswers: [] })
 
