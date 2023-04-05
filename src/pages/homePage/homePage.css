@@ -1,0 +1,111 @@
+#home-page-container {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #2f4550;
+    color: white;
+}
+
+#pun-container {
+    width: 22rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+    /* border: 1px solid black; */
+    text-align: center;
+    font-family: 'Staatliches', cursive;
+    margin-top: 4rem;
+}
+
+#link-box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 35rem;
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px;
+    background-color: #252422;
+    box-shadow: 0 0 2rem -.5rem rgba(72, 202, 228, 1);
+    animation-name: slide-up;
+    animation-duration: 1s;
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(800px);
+    }
+    25% {
+        transform: translateY(600px);
+    }
+    50% {
+        transform: translateY(-50px);
+    }
+    75% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.homePageLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    border-radius: 25px;
+    padding: 2rem;
+    text-align: center;
+    height: 8rem;
+    width: 9rem;
+    margin: 1rem;
+    text-decoration: none;
+    font-family: 'Bebas Neue', cursive;
+    border: none;
+}
+
+.practiceLink {
+    background-color: #f6e101;
+    color: white;
+    box-shadow: 
+    0 0 1.5rem -.5rem #ffbe0b,
+    0 0 1.5rem -.5rem #ffbe0b,
+    0 0 5rem -.5rem rgba(0, 0, 0, .1)
+    ;
+    text-shadow:0 0 -50px yellow;
+}
+
+.flashcardLink {
+    background-color: #fb1327;
+    color: white;
+    box-shadow: 
+    0 0 1.5rem -.5rem #ff1c2f,
+    0 0 1.5rem -.5rem #e63946,
+    0 0 5rem -.5rem rgba(0, 0, 0, .1)
+    ;
+    text-shadow:0 0 -50px yellow;
+}
+
+.searchLink {
+    background-color: #b253fa;
+    color: white;
+    box-shadow: 
+    0 0 1.5rem -.5rem #bd6cfb,
+    0 0 1.5rem -.5rem #bd6cfb,
+    0 0 5rem -.5rem rgba(0, 0, 0, .1)
+    ;
+    text-shadow:0 0 -50px yellow;
+}
+
+.customPracticeLink {
+    background-color: #16db65;
+    color: white;
+    box-shadow: 
+    0 0 1.5rem -.5rem #4bf08d,
+    0 0 1.5rem -.5rem #4bf08d,
+    0 0 5rem -.5rem rgba(0, 0, 0, .1)
+    ;
+    text-shadow:0 0 -50px yellow;
+}
