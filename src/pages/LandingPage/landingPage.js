@@ -6,7 +6,7 @@ export default function LandingPage() {
         <section id="landing-page-container">
             <div id="welcome-card">
                 <h1>Welcome To <br/>Produce Practice <span>Pro</span></h1>
-                <Link to={"/practice"} id="get-started-btn">Get Started</Link>
+                <Link to={"/home"} id="get-started-btn">Get Started</Link>
             </div>
         </section>
     )
