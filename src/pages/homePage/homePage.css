@@ -4,18 +4,48 @@
     align-items: center;
     flex-direction: column;
     height: 100vh;
-    background-color: #2f4550;
-    color: white;
+    background-color: #40916c;
 }
 
 #pun-container {
-    width: 22rem;
-    padding: 1rem;
-    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    height: 12rem;
+    padding: 3rem;
+    font-size: 1.5rem;
     /* border: 1px solid black; */
     text-align: center;
     font-family: 'Staatliches', cursive;
     margin-top: 4rem;
+    border-radius: 25px;
+    background-color: whitesmoke;
+    box-shadow: 0 0 1.5rem -.5rem rgba(0, 0, 0, .5);
+}
+
+.clicked-pun-container {
+    animation-name: flip-card;
+    animation-iteration-count: 1;
+    animation-duration: .5s;
+}
+
+@keyframes flip-card {
+    0% {
+        transform: rotateX(0deg);
+        color: whitesmoke;
+    }
+    25% {
+        transform: translateX(180deg);
+        color: whitesmoke;
+    }
+    50% {
+        transform: rotateX(90deg);
+        color: whitesmoke;
+    }
+    100% {
+        transform: rotateX(0deg);
+    }
 }
 
 #link-box-container {
@@ -23,11 +53,11 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    height: 35rem;
+    height: 25rem;
     border-top-left-radius: 45px;
     border-top-right-radius: 45px;
     background-color: #252422;
-    box-shadow: 0 0 2rem -.5rem rgba(72, 202, 228, 1);
+    box-shadow: 0 0 2rem -.5rem rgba(0, 0, 0, .2);
     animation-name: slide-up;
     animation-duration: 1s;
 }
@@ -67,11 +97,11 @@
 }
 
 .practiceLink {
-    background-color: #f6e101;
+    background-color: #00c9fb;
     color: white;
     box-shadow: 
-    0 0 1.5rem -.5rem #ffbe0b,
-    0 0 1.5rem -.5rem #ffbe0b,
+    0 0 1.5rem -.5rem #24caf4,
+    0 0 1.5rem -.5rem #24caf4,
     0 0 5rem -.5rem rgba(0, 0, 0, .1)
     ;
     text-shadow:0 0 -50px yellow;
