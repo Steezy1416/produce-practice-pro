@@ -1,3 +1,5 @@
+import Navbar from "../../../components/Navbar"
+
 export default function ResultsPage({ timer, wrongCount, setFinished, setIndex, setTimer, setWrongCount }) {
     const { wrongAnswers } = wrongCount
     const { minutes, seconds } = timer
@@ -11,6 +13,7 @@ export default function ResultsPage({ timer, wrongCount, setFinished, setIndex, 
 
     return (
         <section id="result-page-container">
+            <Navbar />
             <h1 id="time-message">Your time was <span className="stat-highlight">{minutes}:{seconds < 10 && 0}{seconds}</span></h1>
 
             <div id="result-card">

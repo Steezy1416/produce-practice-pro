@@ -3,6 +3,7 @@ import ProduceDisplay from "./components/ProduceDisplay";
 import ProduceKeyboard from "./components/ProduceKeyboard";
 import Results from "./components/Results";
 import produce from "../../assets/produce";
+import Navbar from "../../components/Navbar";
 import "./styles.css"
 
 export default function PracticePage() {
@@ -17,6 +18,7 @@ export default function PracticePage() {
         <>
             {!finished &&
                 <section id="practice-page-container">
+                    <Navbar />
                     <ProduceDisplay
                         code={code}
                         index={index}
