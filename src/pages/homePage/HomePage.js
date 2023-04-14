@@ -41,7 +41,7 @@ export default function HomePage() {
             </div>
             <div id="link-box-container">
                 <Link className="homePageLink practiceLink" to={"/practice"}>Practice</Link>
-                <Link className="homePageLink flashcardLink" to={"/"}>Flashcards</Link>
+                <Link className="homePageLink flashcardLink" to={"/flashcards"}>Flashcards</Link>
                 <Link className="homePageLink searchLink" to={"/"}>Search</Link>
                 <Link className="homePageLink customPracticeLink" to={"/"}>Custom Practice</Link>
             </div>
