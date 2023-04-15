@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/produce-practice-pro/static/css/main.65b6f688.css",
+    "main.css": "/produce-practice-pro/static/css/main.4cd02084.css",
     "main.js": "/produce-practice-pro/static/js/main.2f51b389.js",
     "static/media/cauliflower.jpg": "/produce-practice-pro/static/media/cauliflower.9a8d244d0e1e5a86e992.jpg",
     "static/media/metaLink.png": "/produce-practice-pro/static/media/metaLink.90cadab2e0f17a4d60d3.png",
@@ -100,11 +100,11 @@
     "static/media/donut.jpg": "/produce-practice-pro/static/media/donut.ddf5ce7517f06b856b6a.jpg",
     "static/media/honeydew.jpg": "/produce-practice-pro/static/media/honeydew.b9eea43d5b7457300698.jpg",
     "index.html": "/produce-practice-pro/index.html",
-    "main.65b6f688.css.map": "/produce-practice-pro/static/css/main.65b6f688.css.map",
+    "main.4cd02084.css.map": "/produce-practice-pro/static/css/main.4cd02084.css.map",
     "main.2f51b389.js.map": "/produce-practice-pro/static/js/main.2f51b389.js.map"
   },
   "entrypoints": [
-    "static/css/main.65b6f688.css",
+    "static/css/main.4cd02084.css",
     "static/js/main.2f51b389.js"
   ]
 }
