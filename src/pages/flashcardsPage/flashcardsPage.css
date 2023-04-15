@@ -2,4 +2,154 @@
     background-color: #333;
     padding: 4rem 1rem 1rem 1rem;
     height: 100vh;
+    font-family: 'Staatliches', cursive;
+    color: white;
+    background-color: #2f4550;
+}
+
+#flashcard-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+#create-flashcard {
+    background-color: #16db65;
+    color: white;
+    justify-content: center;
+}
+
+.flashcard {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+    color: black;
+    width: 9rem;
+    height: 6rem;
+    border-radius: 15px;
+    text-align: center;
+    padding: .5rem;
+    margin: .6rem;
+    font-size: 1.3rem;
+    box-shadow: 0 0 1.5rem -.5rem rgba(0, 0, 0, .5);
+}
+
+.flashcard p {
+    width: 100%;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.flashcard-btn-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.flashcard-btn-container button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #e63946;
+    color: white;
+    border: none;
+}
+
+.flashcard-btn-container button i {
+    font-size: 1rem;
+}
+
+#flashcard-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+#form-title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+#title-label {
+    background-color: #252422;
+    padding: 1rem;
+    width: 20rem;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    box-shadow: 0 0 1rem -.5rem rgba(0, 0, 0, .5);
+}
+
+#title-input {
+    width: 100%;
+    padding: .5rem;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    background-color: lightgray;
+    color: #333;
+    border: none;
+    font-family: inherit;
+}
+
+#title-input:focus {
+    outline: none;
+}
+
+#produce-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 30rem;
+    overflow: auto;
+    padding: .5rem;
+    border-radius: 15px;
+    background-color: #252422;
+    box-shadow: 0 0 1rem -.5rem rgba(0, 0, 0, .5);
+}
+
+#produce-form-title {
+    font-size: 1.5rem;
+    padding: .5rem;
+}
+
+.produce-label {
+    background-color: #e63946;
+    padding: .2rem;
+    text-align: center;
+    font-size: 1.8rem;
+    width: 90%;
+    border-radius: 10px;
+    margin: .5rem 0;
+}
+
+.produce-input {
+    opacity: 0;
+}
+
+.checked {
+    background-color: #16db65;
+}
+
+#create-card-btn {
+    font-size: 1.2rem;
+    padding: .3rem;
+    font-family: inherit;
+    background-color: #c77dff;
+    border: none;
+    color: inherit;
+    border-radius: 5px;
+}
+
+#create-card-btn:disabled {
+    background-color: lightgrey;
 }
