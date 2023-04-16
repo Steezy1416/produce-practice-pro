@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import Navbar from "../../components/Navbar";
 import "./flashcardsPage.css"
 import produce from "../../assets/produce";
+import { useNavigate } from "react-router-dom";
 
 export default function FlashcardsPage() {
 
@@ -11,10 +12,16 @@ export default function FlashcardsPage() {
     const [showForm, setShowForm] = useState(false)
     const [formState, setFormState] = useState({ flashcardTitle: "", flashcardProduce: [] })
 
-    const removeCard = (card) => {
+    const removeCard = (e, card) => {
+        e.stopPropagation()
         const updatedFlashcards = flashcards.filter(flashcard => flashcard !== card)
         setFlashcards(updatedFlashcards)
         localStorage.setItem("flashcards", JSON.stringify(updatedFlashcards))
+    }
+
+    const navigate = useNavigate()
+    const selectFlashcard = (card) => {
+        navigate(`${card.flashcardTitle}`, { state: { card } })
     }
 
     return (
@@ -29,9 +36,9 @@ export default function FlashcardsPage() {
                         {
                             flashcards.map(card => {
                                 return (
-                                    <div key={card.flashcardTitle} className="flashcard">
+                                    <div key={card.flashcardTitle} onClick={() => selectFlashcard(card)} className="flashcard">
                                         <div className="flashcard-btn-container">
-                                            <button onClick={() => removeCard(card)}><i className="fa-solid fa-xmark"></i></button>
+                                            <button onClick={(e) => removeCard(e, card)}><i className="fa-solid fa-xmark"></i></button>
                                         </div>
                                         <p>{card.flashcardTitle}</p>
                                     </div>

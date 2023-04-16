@@ -1,0 +1,86 @@
+#flashcard-playground-container {
+    background-color: #333;
+    padding: 4rem 1rem 4rem 1rem;
+    height: 100vh;
+    font-family: 'Staatliches', cursive;
+    background-color: #8c2f39;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#main-flashcard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    height: 12rem;
+    padding: 3rem;
+    font-size: 1.8rem;
+    text-align: center;
+    font-family: 'Staatliches', cursive;
+    border-radius: 25px;
+    background-color: whitesmoke;
+    box-shadow: 0 0 1.5rem -.5rem rgba(0, 0, 0, .5);
+}
+
+.clicked-flashcard-container {
+    animation-name: flip-card;
+    animation-iteration-count: 1;
+    animation-duration: .5s;
+}
+
+@keyframes flip-card {
+    0% {
+        transform: rotateX(0deg);
+        color: whitesmoke;
+    }
+    25% {
+        transform: translateX(180deg);
+        color: whitesmoke;
+    }
+    50% {
+        transform: rotateX(90deg);
+        color: whitesmoke;
+    }
+    100% {
+        transform: rotateX(0deg);
+    }
+}
+
+
+#flashcard-metadata {
+    display: flex;
+    justify-content: space-between;
+    align-items: self-start;
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 1rem;
+    color: white;
+}
+
+#main-flashcard-title {
+    height: 4rem;
+    width: 13rem;
+    word-wrap: break-word;
+}
+
+#flashcard-controls-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: .5rem;
+    width: 90%;
+    height: 12rem;
+}
+
+.flashcardBtnControl {
+    border-radius: 10px;
+    border: none;
+    background-color: #fed0bb;
+}
+
+.flashcardBtnControl i {
+    font-size: 2rem;
+}
