@@ -44,7 +44,7 @@ export default function SearchPage() {
             <div id="result-container">
                 {
                     results.length
-                        ? <ul id="result-container">
+                        ? <ul>
                             {
                                 results.map(result => {
                                     return (

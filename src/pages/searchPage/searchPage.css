@@ -35,6 +35,7 @@
     align-items: center;
     overflow: scroll;
     box-shadow: 0 0 1.5rem -.5rem rgba(0, 0, 0, .5);
+    margin: 1rem;
 }
 
 #result-container ul {
@@ -45,7 +46,9 @@
     justify-content: center;
     list-style: none;
     text-align: center;
+    overflow: scroll;
     align-content: flex-start;
+    padding: 1rem 0;
 }
 
 #no-results {
