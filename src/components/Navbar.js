@@ -49,7 +49,7 @@ export default function Navbar() {
                 <Link to="/flashcards" className={getClass("flashcards")}>
                     Flashcards
                 </Link>
-                <Link to="/" className={getClass("")}>
+                <Link to="/search" className={getClass("search")}>
                     Search
                 </Link>
                 <Link to="/" className={getClass("")}>
