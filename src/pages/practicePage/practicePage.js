@@ -9,13 +9,7 @@ import shuffleArray from "../../helper";
 
 export default function PracticePage() {
 
-    const [shuffledProduce, setShufffledProduce] = useState(produce)
-
-    useEffect(() => {
-        setShufffledProduce(prevProduce => {
-            return shuffleArray([...prevProduce])
-        })
-    }, [])
+    const [shuffledProduce, setShufffledProduce] = useState(() => shuffleArray(produce))
 
     const [finished, setFinished] = useState(false)
     const [code, setCode] = useState("")

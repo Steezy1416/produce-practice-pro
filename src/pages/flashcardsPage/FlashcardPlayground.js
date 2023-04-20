@@ -2,6 +2,7 @@ import { useLocation } from "react-router-dom"
 import Navbar from "../../components/Navbar"
 import { useRef, useState } from "react"
 import "./flashcardPlayground.css"
+import shuffleArray from "../../helper"
 
 export default function FlashcardPlayground() {
 
@@ -15,12 +16,11 @@ export default function FlashcardPlayground() {
     const [produce, setProduce] = useState(flashcardProduce)
 
     const shuffleProduce = () => {
-        const shuffledProduce = [...produce]
-        for (let i = shuffledProduce.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [shuffledProduce[i], shuffledProduce[j]] = [shuffledProduce[j], shuffledProduce[i]];
-        }
-        setProduce(shuffledProduce)
+        setProduce(shuffleArray([...produce]))
+        flashcardContainer.current.classList.toggle("clicked-flashcard-container")
+        flashcardContainer.current.addEventListener("animationend", () => {
+            flashcardContainer.current.classList.remove("clicked-flashcard-container");
+        });
         setIndex(0)
     }
 
