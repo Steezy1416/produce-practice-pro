@@ -1,21 +1,18 @@
 import { Link } from "react-router-dom"
 import puns from "./puns"
 import "./homePage.css"
-import { useRef, useState } from "react"
-
-const shuffleArray = (array) => {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-}
-
-const shuffledPuns = shuffleArray(puns)
-
-const [{ question, answer }] = shuffledPuns
+import { useEffect, useRef, useState } from "react"
+import shuffleArray from "../../helper"
 
 export default function HomePage() {
+
+    const [randomPun, setRandomPun] = useState({ question: "", answer: "" })
+
+    useEffect(() => {
+        const shuffledPuns = shuffleArray(puns)
+        const [{ question, answer }] = shuffledPuns
+        setRandomPun({ question, answer })
+    }, [])
 
     const [onQuestion, setOnQuestion] = useState(true)
     const punContainer = useRef(null)
@@ -34,8 +31,8 @@ export default function HomePage() {
             <div ref={punContainer} onClick={handleCardClick} id="pun-container">
                 <p id="pun-text">
                     {onQuestion
-                        ? question
-                        : answer
+                        ? randomPun.question
+                        : randomPun.answer
                     }
                 </p>
             </div>
@@ -43,7 +40,6 @@ export default function HomePage() {
                 <Link className="homePageLink practiceLink" to={"/practice"}>Practice</Link>
                 <Link className="homePageLink flashcardLink" to={"/flashcards"}>Flashcards</Link>
                 <Link className="homePageLink searchLink" to={"/search"}>Search</Link>
-                <Link className="homePageLink customPracticeLink" to={"/"}>Custom Practice</Link>
             </div>
         </section>
     )

@@ -1,12 +1,21 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ProduceDisplay from "./components/ProduceDisplay";
 import ProduceKeyboard from "./components/ProduceKeyboard";
 import Results from "./components/Results";
 import produce from "../../assets/produce";
 import Navbar from "../../components/Navbar";
 import "./styles.css"
+import shuffleArray from "../../helper";
 
 export default function PracticePage() {
+
+    const [shuffledProduce, setShufffledProduce] = useState(produce)
+
+    useEffect(() => {
+        setShufffledProduce(prevProduce => {
+            return shuffleArray([...prevProduce])
+        })
+    }, [])
 
     const [finished, setFinished] = useState(false)
     const [code, setCode] = useState("")
@@ -23,7 +32,7 @@ export default function PracticePage() {
                         code={code}
                         index={index}
                         setIndex={setIndex}
-                        produce={produce}
+                        produce={shuffledProduce}
                         timer={timer}
                         setTimer={setTimer}
                         wrongCount={wrongCount}
@@ -35,7 +44,7 @@ export default function PracticePage() {
                         setCode={setCode}
                         index={index}
                         setIndex={setIndex}
-                        produce={produce}
+                        produce={shuffledProduce}
                         setFinished={setFinished}
                         setTimer={setTimer}
                         timer={timer}

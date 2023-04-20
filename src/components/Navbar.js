@@ -52,9 +52,6 @@ export default function Navbar() {
                 <Link to="/search" className={getClass("search")}>
                     Search
                 </Link>
-                <Link to="/" className={getClass("")}>
-                    Custom Practice
-                </Link>
             </ul>
         </nav>
     )

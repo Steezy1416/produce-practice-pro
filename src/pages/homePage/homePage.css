@@ -51,10 +51,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    height: 25rem;
-    border-top-left-radius: 45px;
-    border-top-right-radius: 45px;
+    flex-direction: column;
+    height: 28rem;
+    width: 100%;
+    padding: 1rem;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
     background-color: #252422;
     box-shadow: 0 0 2rem -.5rem rgba(0, 0, 0, .2);
     animation-name: slide-up;
@@ -83,12 +85,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
     border-radius: 25px;
     padding: 2rem;
     text-align: center;
     height: 8rem;
-    width: 9rem;
+    width: 18rem;
     margin: 1rem;
     text-decoration: none;
     font-family: 'Bebas Neue', cursive;
@@ -123,17 +125,6 @@
     box-shadow: 
     0 0 1.5rem -.5rem #bd6cfb,
     0 0 1.5rem -.5rem #bd6cfb,
-    0 0 5rem -.5rem rgba(0, 0, 0, .1)
-    ;
-    text-shadow:0 0 -50px yellow;
-}
-
-.customPracticeLink {
-    background-color: #16db65;
-    color: white;
-    box-shadow: 
-    0 0 1.5rem -.5rem #4bf08d,
-    0 0 1.5rem -.5rem #4bf08d,
     0 0 5rem -.5rem rgba(0, 0, 0, .1)
     ;
     text-shadow:0 0 -50px yellow;
