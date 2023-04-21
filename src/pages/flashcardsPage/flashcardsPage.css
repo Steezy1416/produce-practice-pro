@@ -150,3 +150,9 @@
 #create-card-btn:disabled {
     background-color: lightgrey;
 }
+
+@media(min-width: 768px) {
+    #produce-form-container {
+        width: 30rem;
+    }
+}

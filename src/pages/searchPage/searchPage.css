@@ -91,3 +91,10 @@
     width: 5rem;
     height: 5rem;
 }
+
+@media(min-width: 768px) {
+    #result-container {
+        width: 30rem;
+        padding: 1rem;
+    }
+}

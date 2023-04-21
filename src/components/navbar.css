@@ -62,3 +62,14 @@
 i {
     font-size: 1.5rem;
 }
+
+@media(min-width: 768px) {
+    
+    #hamburger-container {
+        display: none;  
+    }
+    
+    .nav-link-container {
+        width: 20rem;
+    }
+}

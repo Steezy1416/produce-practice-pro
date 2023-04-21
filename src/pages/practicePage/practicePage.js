@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import ProduceDisplay from "./components/ProduceDisplay";
 import ProduceKeyboard from "./components/ProduceKeyboard";
 import Results from "./components/Results";
